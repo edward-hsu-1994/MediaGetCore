@@ -433,6 +433,27 @@
           "lib/dotnet/System.Xml.ReaderWriter.dll": {}
         }
       },
+      "System.Xml.XmlDocument/4.0.1-beta-23516": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10",
+          "System.Diagnostics.Debug": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.IO": "4.0.10",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Text.Encoding": "4.0.10",
+          "System.Threading": "4.0.10",
+          "System.Xml.ReaderWriter": "4.0.10"
+        },
+        "compile": {
+          "ref/dotnet5.1/System.Xml.XmlDocument.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet5.4/System.Xml.XmlDocument.dll": {}
+        }
+      },
       "System.Xml.XPath/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -451,6 +472,27 @@
         },
         "runtime": {
           "lib/dotnet/System.Xml.XPath.dll": {}
+        }
+      },
+      "System.Xml.XPath.XmlDocument/4.0.1-beta-23516": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.IO": "4.0.10",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Threading": "4.0.10",
+          "System.Xml.ReaderWriter": "4.0.10",
+          "System.Xml.XmlDocument": "4.0.0",
+          "System.Xml.XPath": "4.0.0"
+        },
+        "compile": {
+          "ref/dotnet5.1/System.Xml.XPath.XmlDocument.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet5.4/System.Xml.XPath.XmlDocument.dll": {}
         }
       }
     },
@@ -1006,6 +1048,27 @@
           "lib/dotnet/System.Xml.ReaderWriter.dll": {}
         }
       },
+      "System.Xml.XmlDocument/4.0.1-beta-23516": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10",
+          "System.Diagnostics.Debug": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.IO": "4.0.10",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Text.Encoding": "4.0.10",
+          "System.Threading": "4.0.10",
+          "System.Xml.ReaderWriter": "4.0.10"
+        },
+        "compile": {
+          "ref/dotnet5.1/System.Xml.XmlDocument.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet5.4/System.Xml.XmlDocument.dll": {}
+        }
+      },
       "System.Xml.XPath/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -1024,6 +1087,27 @@
         },
         "runtime": {
           "lib/dotnet/System.Xml.XPath.dll": {}
+        }
+      },
+      "System.Xml.XPath.XmlDocument/4.0.1-beta-23516": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.IO": "4.0.10",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Threading": "4.0.10",
+          "System.Xml.ReaderWriter": "4.0.10",
+          "System.Xml.XmlDocument": "4.0.0",
+          "System.Xml.XPath": "4.0.0"
+        },
+        "compile": {
+          "ref/dotnet5.1/System.Xml.XPath.XmlDocument.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet5.4/System.Xml.XPath.XmlDocument.dll": {}
         }
       }
     },
@@ -1453,6 +1537,27 @@
           "lib/dotnet/System.Xml.ReaderWriter.dll": {}
         }
       },
+      "System.Xml.XmlDocument/4.0.1-beta-23516": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10",
+          "System.Diagnostics.Debug": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.IO": "4.0.10",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Text.Encoding": "4.0.10",
+          "System.Threading": "4.0.10",
+          "System.Xml.ReaderWriter": "4.0.10"
+        },
+        "compile": {
+          "ref/dotnet5.1/System.Xml.XmlDocument.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet5.4/System.Xml.XmlDocument.dll": {}
+        }
+      },
       "System.Xml.XPath/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -1471,6 +1576,27 @@
         },
         "runtime": {
           "lib/dotnet/System.Xml.XPath.dll": {}
+        }
+      },
+      "System.Xml.XPath.XmlDocument/4.0.1-beta-23516": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.10",
+          "System.Globalization": "4.0.10",
+          "System.IO": "4.0.10",
+          "System.Resources.ResourceManager": "4.0.0",
+          "System.Runtime": "4.0.20",
+          "System.Runtime.Extensions": "4.0.10",
+          "System.Threading": "4.0.10",
+          "System.Xml.ReaderWriter": "4.0.10",
+          "System.Xml.XmlDocument": "4.0.0",
+          "System.Xml.XPath": "4.0.0"
+        },
+        "compile": {
+          "ref/dotnet5.1/System.Xml.XPath.XmlDocument.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet5.4/System.Xml.XPath.XmlDocument.dll": {}
         }
       }
     }
@@ -2839,6 +2965,38 @@
         "System.Xml.ReaderWriter.nuspec"
       ]
     },
+    "System.Xml.XmlDocument/4.0.1-beta-23516": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "Al+MOyRvCL9SlJYzInF9cH9Sxlf4eBLtD1AadyZVaRqhmcTYDst/AEf6GerqQ4hHfrGmeCflfxWPc2BYBJ2nug==",
+      "files": [
+        "lib/dotnet5.4/System.Xml.XmlDocument.dll",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Xml.XmlDocument.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "ref/dotnet5.1/de/System.Xml.XmlDocument.xml",
+        "ref/dotnet5.1/es/System.Xml.XmlDocument.xml",
+        "ref/dotnet5.1/fr/System.Xml.XmlDocument.xml",
+        "ref/dotnet5.1/it/System.Xml.XmlDocument.xml",
+        "ref/dotnet5.1/ja/System.Xml.XmlDocument.xml",
+        "ref/dotnet5.1/ko/System.Xml.XmlDocument.xml",
+        "ref/dotnet5.1/ru/System.Xml.XmlDocument.xml",
+        "ref/dotnet5.1/System.Xml.XmlDocument.dll",
+        "ref/dotnet5.1/System.Xml.XmlDocument.xml",
+        "ref/dotnet5.1/zh-hans/System.Xml.XmlDocument.xml",
+        "ref/dotnet5.1/zh-hant/System.Xml.XmlDocument.xml",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Xml.XmlDocument.dll",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "System.Xml.XmlDocument.4.0.1-beta-23516.nupkg",
+        "System.Xml.XmlDocument.4.0.1-beta-23516.nupkg.sha512",
+        "System.Xml.XmlDocument.nuspec"
+      ]
+    },
     "System.Xml.XPath/4.0.0": {
       "type": "package",
       "serviceable": true,
@@ -2870,6 +3028,36 @@
         "System.Xml.XPath.4.0.0.nupkg.sha512",
         "System.Xml.XPath.nuspec"
       ]
+    },
+    "System.Xml.XPath.XmlDocument/4.0.1-beta-23516": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "N8X/Hc0E2rNoaX4d2gdIqJXfy94eDQAkPfIIyAvREWcmlC7zRbruVJLDiCnuLoxm+4M/r9JbQVWFzM8i8jyImQ==",
+      "files": [
+        "lib/dotnet5.4/System.Xml.XPath.XmlDocument.dll",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "ref/dotnet5.1/de/System.Xml.XPath.XmlDocument.xml",
+        "ref/dotnet5.1/es/System.Xml.XPath.XmlDocument.xml",
+        "ref/dotnet5.1/fr/System.Xml.XPath.XmlDocument.xml",
+        "ref/dotnet5.1/it/System.Xml.XPath.XmlDocument.xml",
+        "ref/dotnet5.1/ja/System.Xml.XPath.XmlDocument.xml",
+        "ref/dotnet5.1/ko/System.Xml.XPath.XmlDocument.xml",
+        "ref/dotnet5.1/ru/System.Xml.XPath.XmlDocument.xml",
+        "ref/dotnet5.1/System.Xml.XPath.XmlDocument.dll",
+        "ref/dotnet5.1/System.Xml.XPath.XmlDocument.xml",
+        "ref/dotnet5.1/zh-hans/System.Xml.XPath.XmlDocument.xml",
+        "ref/dotnet5.1/zh-hant/System.Xml.XPath.XmlDocument.xml",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "System.Xml.XPath.XmlDocument.4.0.1-beta-23516.nupkg",
+        "System.Xml.XPath.XmlDocument.4.0.1-beta-23516.nupkg.sha512",
+        "System.Xml.XPath.XmlDocument.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -2889,7 +3077,9 @@
       "System.Runtime >= 4.0.21-beta-23516",
       "System.IO.FileSystem >= 4.0.1-beta-23516",
       "System.Threading >= 4.0.11-beta-23516",
-      "System.Diagnostics.Process >= 4.1.0-beta-23516"
+      "System.Diagnostics.Process >= 4.1.0-beta-23516",
+      "System.Xml.XmlDocument >= 4.0.1-beta-23516",
+      "System.Xml.XPath.XmlDocument >= 4.0.1-beta-23516"
     ]
   }
 }

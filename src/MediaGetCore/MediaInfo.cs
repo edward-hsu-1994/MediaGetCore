@@ -36,14 +36,19 @@ namespace MediaGetCore{
         public Uri RealUrl { get; set; }
 
         /// <summary>
-        /// 影片長度(秒)
+        /// 媒體長度(秒)
         /// </summary>
         public int Duration { get; set; }
 
         /// <summary>
-        /// 影片敘述
+        /// 媒體敘述
         /// </summary>
         public string Description { get; set; }
+
+        /// <summary>
+        /// 影片縮圖網址
+        /// </summary>
+        public Uri Thumbnail { get; set; }
 
         /// <summary>
         /// 媒體其他相關屬性

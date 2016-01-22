@@ -13,7 +13,8 @@ namespace MediaGetCore{
         /// 剖析器輸入驗證正規表示式對應
         /// </summary>
         public static Dictionary<Type, string> MatchRegex { get; set; } = new Dictionary<Type, string>() {
-            [typeof(YoutubeExtractor)] = @"http(s)?://www.youtube.com/watch\?v=.+"
+            [typeof(YoutubeExtractor)] = @"http(s)?://www.youtube.com/watch\?v=.+",
+            [typeof(XuiteExtractor)] = @"(^https?://vlog.xuite.net/play/\S+)|(^https?://m.xuite.net/vlog/\S+/\S+)"
         };
     }
 }

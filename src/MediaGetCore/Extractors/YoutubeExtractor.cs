@@ -51,12 +51,15 @@ namespace MediaGetCore.Extractors{
                 resultItem.Name = mediaJObject["args"]["title"].Value<string>();
                 resultItem.Duration = mediaJObject["args"]["length_seconds"].Value<int>();
                 resultItem.Description = description;
-                resultItem.Type = MIME[
+                resultItem.Thumbnail = new Uri(mediaJObject["args"]["thumbnail_url"].Value<string>());
+                resultItem.Type = (MediaTypes)Enum.Parse(
+                    typeof(MediaTypes),
                     new string(
                         item["type"]["mime"].Value<string>()
                         .TakeWhile(Ch => Ch != '/').ToArray()
-                    )
-                ];
+                    ),
+                    true
+                );
                 
                 #region 連結解密
                 UriBuilder realUrlBuilder = new UriBuilder(item["url"].Value<string>());
