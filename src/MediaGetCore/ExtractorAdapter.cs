@@ -4,6 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace MediaGetCore{
+    /// <summary>
+    /// 提供剖析器自動配對服務
+    /// </summary>
     public class ExtractorAdapter : ExtractorBase {
         public override event ProcessEvent OnProcess;
         public override event CompletedEvent OnCompleted;

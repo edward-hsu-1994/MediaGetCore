@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MediaGetCore.Extractors{
     /// <summary>
-    /// 針對Youtube剖析器
+    /// 針對Youtube的剖析器
     /// </summary>
     public class YoutubeExtractor : ExtractorBase {
         public override event ProcessEvent OnProcess;
@@ -78,7 +78,7 @@ namespace MediaGetCore.Extractors{
                 #region 擴充屬性
                 resultItem.Attributes["mime"] = item["type"]["mime"].Value<string>();
                 resultItem.Attributes["codecs"] = item["type"]["codecs"]?.Value<string>();
-                
+                resultItem.Attributes["author"] = mediaJObject["args"]["author"].Value<string>();
                 if (resultItem.Type == MediaTypes.Video) {
                     resultItem.Attributes["size"] = item["size"]?.Value<string>() ?? streamFormatList[item["itag"]?.Value<string>()];
                     resultItem.Attributes["quality"] = item["quality"]?.Value<string>();

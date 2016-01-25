@@ -14,7 +14,8 @@ namespace MediaGetCore{
         /// </summary>
         public static Dictionary<Type, string> MatchRegex { get; set; } = new Dictionary<Type, string>() {
             [typeof(YoutubeExtractor)] = @"http(s)?://www.youtube.com/watch\?v=.+",
-            [typeof(XuiteExtractor)] = @"(^https?://vlog.xuite.net/play/\S+)|(^https?://m.xuite.net/vlog/\S+/\S+)"
+            [typeof(XuiteExtractor)] = @"(^https?://vlog.xuite.net/play/\S+)|(^https?://m.xuite.net/vlog/\S+/\S+)",
+            [typeof(DailymotionExtractor)] = @"http(s)?://www.dailymotion.com/video/\S+"
         };
     }
 }

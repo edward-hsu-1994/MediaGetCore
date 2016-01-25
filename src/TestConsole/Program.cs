@@ -13,8 +13,8 @@ namespace TestConsole{
             ExtractorAdapter adp = new ExtractorAdapter(typeof(YoutubeExtractor),typeof(XuiteExtractor));
             adp.OnProcess += OnProcess;//輔助用的事件
             adp.OnCompleted += OnCompleted;//剖析完成的結果可使用事件傳遞或方法返回
-            //var k = adp.GetMediaInfos("https://www.youtube.com/watch?v=70rBpWH_Wo0");
-            var result = adp.GetMediaInfos("http://vlog.xuite.net/play/T3NPSm9lLTIxNjI0MzgxLmZsdg==");
+            var k = adp.GetMediaInfos("https://www.youtube.com/watch?v=70rBpWH_Wo0");
+            //var result = adp.GetMediaInfos("http://vlog.xuite.net/play/T3NPSm9lLTIxNjI0MzgxLmZsdg==");
         }
 
         private static void OnProcess(IExtractor sender, double percent) {

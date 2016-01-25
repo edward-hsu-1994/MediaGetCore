@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 using System.Xml;
 
 namespace MediaGetCore.Extractors{
+    /// <summary>
+    /// 針對Xuite的剖析器
+    /// </summary>
     public class XuiteExtractor : ExtractorBase {
         public override event ProcessEvent OnProcess;
         public override event CompletedEvent OnCompleted;
@@ -30,7 +33,7 @@ namespace MediaGetCore.Extractors{
             baseInfo.Thumbnail = new Uri(apiData["thumb"]);
             baseInfo.ExtractorType = this.GetType();
             baseInfo.Type = (MediaTypes)Enum.Parse(typeof(MediaTypes), apiData["type"], true);
-
+            baseInfo.Attributes["author"] = apiData["author_name"];
             OnProcess?.Invoke(this, 0.3);
             if (apiData.ContainsKey("src")) {//360
                 MediaInfo def_src = baseInfo.Clone();
