@@ -14,13 +14,14 @@ namespace MediaGetCore.Factories {
         /// 取得目前環境是否支援NodeJs
         /// </summary>
         private static Lazy<bool> LazyIsSupport = new Lazy<bool>(() => {
-            ProcessStartInfo nodeJsVersion = new ProcessStartInfo("nod0e","-v");
+            ProcessStartInfo nodeJsVersion = new ProcessStartInfo("node","-v");
             nodeJsVersion.UseShellExecute = false;
             nodeJsVersion.RedirectStandardOutput = true;
             nodeJsVersion.StandardOutputEncoding = Encoding.UTF8;
             nodeJsVersion.RedirectStandardError = true;
             nodeJsVersion.StandardErrorEncoding = Encoding.UTF8;
-
+            nodeJsVersion.CreateNoWindow = true;
+            
             try {
                 Process command = Process.Start(nodeJsVersion);
                 return command.StandardOutput.ReadToEnd()?.Length > 0;
@@ -29,12 +30,18 @@ namespace MediaGetCore.Factories {
             }
         });
         public static bool IsSupport => LazyIsSupport.Value;
+        
+        public static Func<string, string> CustomScriptHandler { get; set; } = null;
 
         public static string RunScript(string Script,string OutputFunction = "console.log") {
             Guid tempFileName = Guid.NewGuid();
+            var OKScript = Script.Replace(OutputFunction, "console.log");
+            if(CustomScriptHandler != null) {
+                return CustomScriptHandler.Invoke(OKScript);
+            }
             string fullTempFileName = $"/tmp/{tempFileName}.js";
             using (StreamWriter textWriter = new StreamWriter(File.Create(fullTempFileName))) {
-                textWriter.Write(Script.Replace(OutputFunction,"console.log"));
+                textWriter.Write(OKScript);
             }
             
             ProcessStartInfo script = new ProcessStartInfo("node", fullTempFileName);
@@ -48,7 +55,7 @@ namespace MediaGetCore.Factories {
             string output = command.StandardOutput.ReadToEnd().Replace("\r", "");
             string errorOutput = command.StandardError.ReadToEnd().Replace("\r", "");
 
-            //File.Delete(fullTempFileName);
+            File.Delete(fullTempFileName);
             if (output?.Length == 0) {
                 throw new Exception(errorOutput);
             } else {

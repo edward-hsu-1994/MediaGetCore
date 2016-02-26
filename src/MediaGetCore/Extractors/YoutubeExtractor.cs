@@ -139,8 +139,10 @@ namespace MediaGetCore.Extractors{
 
                 return (Args) => {
                     string firstArgs = (string)Args[0];
-                    if (firstArgs.Length == 81) return firstArgs;
-                    return NodeJsFactory.EvalFunc(functionBody)(Args);
+                    //if (firstArgs.Length == 81) return firstArgs;
+                    var result = NodeJsFactory.EvalFunc(functionBody)(Args);
+                    if (result.Length == 81) return result;
+                    return firstArgs;
                 };
             }
         }
