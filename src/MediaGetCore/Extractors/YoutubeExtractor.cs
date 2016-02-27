@@ -63,14 +63,13 @@ namespace MediaGetCore.Extractors{
                 
                 #region 連結解密
                 UriBuilder realUrlBuilder = new UriBuilder(item["url"].Value<string>());
-                realUrlBuilder.SetQueryParam("signature", decoding(
-                    realUrlBuilder.GetQueryParam("s") ??
-                    realUrlBuilder.GetQueryParam("sig") ??
-                    realUrlBuilder.GetQueryParam("signature") ??
-                    item["s"]?.Value<string>() ??
-                    item["sig"]?.Value<string>() ??
-                    item["signature"]?.Value<string>()
-                ));
+                var UrlSignature = realUrlBuilder.GetQueryParam("s") ??
+                                  realUrlBuilder.GetQueryParam("sig") ??
+                                  realUrlBuilder.GetQueryParam("signature");
+                var ItemSignature = item["s"]?.Value<string>() ??
+                                    item["sig"]?.Value<string>() ??
+                                    item["signature"]?.Value<string>();
+                realUrlBuilder.SetQueryParam("signature",decoding(UrlSignature ?? ItemSignature , UrlSignature != null));
                 resultItem.RealUrl = realUrlBuilder.Uri;
                 #endregion
                 #endregion
@@ -138,11 +137,16 @@ namespace MediaGetCore.Extractors{
                 functionBody = $"function({args})" + "{" + $"var {functionRefName}={functionRef};{functionBody}";
 
                 return (Args) => {
-                    string firstArgs = (string)Args[0];
-                    //if (firstArgs.Length == 81) return firstArgs;
-                    var result = NodeJsFactory.EvalFunc(functionBody)(Args);
-                    if (result.Length == 81) return result;
-                    return firstArgs;
+                    string firstArgs = (string)Args[0];//尚未解密的簽章
+                    bool signatureType = (bool)Args[1];//如果為true則表示signaute原本是在編碼後的URL
+                    var ScriptResult = NodeJsFactory.EvalFunc(functionBody)(firstArgs);//解密
+                    string result = firstArgs;
+                    if (signatureType) {
+                        if (firstArgs.Length != 81 && result.Length == 81) result = ScriptResult;
+                    } else {
+                        result = ScriptResult;
+                    }
+                    return result;
                 };
             }
         }
