@@ -29,7 +29,7 @@ namespace MediaGetCore.Extractors{
 
             string description = youtubePage.DocumentNode.SelectSingleNode("//meta[@name='description']").GetAttributeValue("content", null);
 
-            NodeJsFactory.Func decoding = await this.GetDecodingSignature("https:" + (string)mediaJObject["assets"]["js"]);
+            JsFactory.Func decoding = await this.GetDecodingSignature("https:" + (string)mediaJObject["assets"]["js"]);
             Dictionary<string, string> streamFormatList = this.GetStreamFormatList(mediaJObject);
             JObject[] streamMap = this.GetStreamMap(mediaJObject);
 
@@ -107,7 +107,7 @@ namespace MediaGetCore.Extractors{
             string playerConfig = (from t in allScripts
                                    where t.InnerHtml?.IndexOf("var ytplayer") > -1
                                    select t.InnerHtml).First();
-            return JObject.Parse(NodeJsFactory.RunScript(
+            return JObject.Parse(JsFactory.RunScript(
                 "var window={};" + playerConfig + "console.log(JSON.stringify(ytplayer.config));")
             );
         }
@@ -117,7 +117,7 @@ namespace MediaGetCore.Extractors{
         /// </summary>
         /// <param name="Url">YoutubePlayer類別庫網址</param>
         /// <returns>解密函數委派</returns>
-        private async Task<NodeJsFactory.Func> GetDecodingSignature(string Url) {
+        private async Task<JsFactory.Func> GetDecodingSignature(string Url) {
             string playerScript = await this.DownloadStringAsync(Url);
             string functionName = playerScript.InnerString("\"signature\",", "(");
             if(functionName == null) {
@@ -139,10 +139,10 @@ namespace MediaGetCore.Extractors{
                 return (Args) => {
                     string firstArgs = (string)Args[0];//尚未解密的簽章
                     bool signatureType = (bool)Args[1];//如果為true則表示signaute原本是在編碼後的URL
-                    var ScriptResult = NodeJsFactory.EvalFunc(functionBody)(firstArgs);//解密
+                    var ScriptResult = JsFactory.EvalFunc(functionBody)(firstArgs);//解密
                     string result = firstArgs;
                     if (signatureType) {
-                        if (firstArgs.Length != 81 && result.Length == 81) result = ScriptResult;
+                        if (firstArgs.Length != 81 && ScriptResult.Length == 81) result = ScriptResult;
                     } else {
                         result = ScriptResult;
                     }

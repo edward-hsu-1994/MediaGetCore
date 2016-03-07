@@ -331,10 +331,5 @@
             <param name="MediaJObject">影片設定資訊</param>
             <returns>影片格式清單</returns>
         </member>
-        <member name="F:MediaGetCore.Factories.NodeJsFactory.LazyIsSupport">
-            <summary>
-            取得目前環境是否支援NodeJs
-            </summary>
-        </member>
     </members>
 </doc>

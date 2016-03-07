@@ -89,7 +89,7 @@ namespace MediaGetCore.Extractors{
 
             MediaJs = "var document={getElementById:function(){return null;}},parent,DM_DispatchEvent={dispatch:function(){}},window={playerV5:{}},location={host:{match:function(){return false;}},search:''},DailymotionPlayer={},console={},dmp={create:function(a,b){return b;}};" + MediaJs + ";console.log(JSON.stringify(window.playerV5));";
             #endregion
-            return JObject.Parse(NodeJsFactory.RunScript(MediaJs));
+            return JObject.Parse(JsFactory.RunScript(MediaJs));
         }
 
         /// <summary>

@@ -14,6 +14,7 @@ namespace TestConsole{
             ExtractorAdapter adp = new ExtractorAdapter(typeof(YoutubeExtractor),typeof(XuiteExtractor));
 
             var testUrls = new string[]{
+                "http://vlog.xuite.net/play/ZWtGQWF6LTE1NjI1ODEyLmZsdg==",
                 "https://www.youtube.com/watch?v=rmOJPXx83DA", 
                 "https://www.youtube.com/watch?v=AXE39T0uHAA",
                 "https://www.youtube.com/watch?v=uEcKDfMS_jY",
