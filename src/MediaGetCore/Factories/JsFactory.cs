@@ -14,6 +14,9 @@ namespace MediaGetCore.Factories {
         public readonly static Func<string, string> NodeJsScriptHandler = (Script) => {
             Guid tempFileName = Guid.NewGuid();
 
+            if (!Directory.Exists("/tmp/")) {
+                Directory.CreateDirectory("/tmp/");
+            }
             string fullTempFileName = $"/tmp/{tempFileName}.js";
             using (StreamWriter textWriter = new StreamWriter(File.Create(fullTempFileName))) {
                 textWriter.Write(Script);
