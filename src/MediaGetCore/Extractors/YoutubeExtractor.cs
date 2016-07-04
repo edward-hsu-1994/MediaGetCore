@@ -124,10 +124,10 @@ namespace MediaGetCore.Extractors{
                 return (Args) => (string)Args[0];
             } else {
                 string functionBody = $"function" +
-                    playerScript.InnerString($",{functionName}=function", "}") +
+                    playerScript.InnerString($"\n{functionName}=function", "}") +
                     ";}";
 
-                string functionRefName = functionBody.InnerString(";\n", ".");
+                string functionRefName = functionBody.InnerString(";", ".");
                 string functionRef = playerScript.InnerString($"var {functionRefName}=", ";var ");
 
 
