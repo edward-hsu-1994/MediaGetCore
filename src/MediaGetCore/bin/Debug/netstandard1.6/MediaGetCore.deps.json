@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v1.6/",
-    "signature": "e38173cdee87f96faf1509300bb3206ab9860793"
+    "signature": "fa822588cb35bc279f867d4312602d6fe0dfb507"
   },
   "compilationOptions": {},
   "targets": {
@@ -9,6 +9,7 @@
     ".NETStandard,Version=v1.6/": {
       "MediaGetCore/1.0.0": {
         "dependencies": {
+          "docfx.msbuild": "2.1.0",
           "HtmlAgilityPack.NetCore": "1.4.9.2",
           "NETStandard.Library": "1.6.0",
           "Newtonsoft.Json": "9.0.1",
@@ -20,6 +21,7 @@
           "MediaGetCore.dll": {}
         }
       },
+      "docfx.msbuild/2.1.0": {},
       "HtmlAgilityPack.NetCore/1.4.9.2": {
         "dependencies": {
           "Microsoft.CSharp": "4.0.1",
@@ -936,6 +938,11 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "docfx.msbuild/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ISfiWbBPh/TtApDpd8WnKbwbY6sPUIIaUVsY6KR26NjcYarjT263G/Bc8+mEKrG7gWDGd9znwgnH+t4pitKZGw=="
     },
     "HtmlAgilityPack.NetCore/1.4.9.2": {
       "type": "package",
