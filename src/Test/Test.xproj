@@ -7,8 +7,8 @@
 
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>2a76a056-b6e5-42c7-ac68-d0f7aa2f8908</ProjectGuid>
-    <RootNamespace>MediaGetCore</RootNamespace>
+    <ProjectGuid>f8f5eb74-672e-4200-a46d-fb832d6ef9c0</ProjectGuid>
+    <RootNamespace>Test</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>

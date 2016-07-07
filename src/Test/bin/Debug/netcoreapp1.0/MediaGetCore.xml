@@ -1,0 +1,335 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MediaGetCore</name>
+    </assembly>
+    <members>
+        <member name="T:MediaGetCore.ExtractorAdapter">
+            <summary>
+            提供剖析器自動配對服務
+            </summary>
+        </member>
+        <member name="P:MediaGetCore.ExtractorAdapter.EntityList">
+            <summary>
+            支援對象剖析器類型
+            </summary>
+        </member>
+        <member name="M:MediaGetCore.ExtractorAdapter.#ctor(System.Type[])">
+            <summary>
+            建構剖析器的類型
+            </summary>
+            <param name="Extractors">初始化時加入的支援項目</param>
+        </member>
+        <member name="T:MediaGetCore.ExtractorBase">
+            <summary>
+            已簡化輸入連結檢查方式與簡易非同步化方法的類別
+            </summary>
+        </member>
+        <member name="M:MediaGetCore.ExtractorBase.GetMediaInfos(System.String)">
+            <summary>
+            取得指定連結的影片資訊
+            </summary>
+            <param name="Url">指定連結<see cref="T:System.String"/></param>
+            <returns>影片資訊集合</returns>
+        </member>
+        <member name="M:MediaGetCore.ExtractorBase.GetMediaInfos(System.Uri)">
+            <summary>
+            取得指定連結的影片資訊
+            </summary>
+            <param name="Url">指定連結<see cref="T:System.Uri"/></param>
+            <returns>影片資訊集合</returns>
+        </member>
+        <member name="M:MediaGetCore.ExtractorBase.IsMatch(System.String)">
+            <summary>
+            檢查指定連結是否符合該Extractor規範
+            </summary>
+            <param name="Url">指定連結<see cref="T:System.String"/></param>
+            <returns>檢查結果</returns>
+        </member>
+        <member name="M:MediaGetCore.ExtractorBase.IsMatch(System.Uri)">
+            <summary>
+            檢查指定連結是否符合該Extractor規範
+            </summary>
+            <param name="Url">指定連結<see cref="T:System.Uri"/></param>
+            <returns>檢查結果</returns>
+        </member>
+        <member name="M:MediaGetCore.ExtractorBase.GetMediaInfosAsync(System.String)">
+            <summary>
+            非同步取得指定連結的影片資訊
+            </summary>
+            <param name="Url">指定連結<see cref="T:System.String"/></param>
+            <returns>影片資訊集合</returns>
+        </member>
+        <member name="M:MediaGetCore.ExtractorBase.GetMediaInfosAsync(System.Uri)">
+            <summary>
+            非同步取得指定連結的影片資訊
+            </summary>
+            <param name="Url">指定連結<see cref="T:System.Uri"/></param>
+            <returns>影片資訊集合</returns>
+        </member>
+        <member name="M:MediaGetCore.ExtractorBase.DownloadStringAsync(System.String)">
+            <summary>
+            非同步下載指定連結字串
+            </summary>
+            <param name="Url">指定連結<see cref="T:System.String"/></param>
+            <returns>結果字串</returns>
+        </member>
+        <member name="M:MediaGetCore.ExtractorBase.DownloadStringAsync(System.Uri)">
+            <summary>
+            非同步下載指定連結字串
+            </summary>
+            <param name="Url">指定連結<see cref="T:System.Uri"/></param>
+            <returns>結果字串</returns>
+        </member>
+        <member name="M:MediaGetCore.ExtractorBase.DownloadJToken(System.String)">
+            <summary>
+            非同步下載指定連結<see cref="T:Newtonsoft.Json.Linq.JToken"/>
+            </summary>
+            <param name="Url">指定連結<see cref="T:System.String"/></param>
+            <returns>結果JToken</returns>
+        </member>
+        <member name="M:MediaGetCore.ExtractorBase.DownloadJToken(System.Uri)">
+            <summary>
+            非同步下載指定連結<see cref="T:Newtonsoft.Json.Linq.JToken"/>
+            </summary>
+            <param name="Url">指定連結<see cref="T:System.Uri"/></param>
+            <returns>結果JToken</returns>
+        </member>
+        <member name="M:MediaGetCore.ExtractorBase.DownloadHtmlAsync(System.String)">
+            <summary>
+            非同步下載指定連結<see cref="T:HtmlAgilityPack.HtmlDocument"/>
+            </summary>
+            <param name="Url">指定連結<see cref="T:System.String"/></param>
+            <returns>結果HtmlDocument</returns>
+        </member>
+        <member name="M:MediaGetCore.ExtractorBase.DownloadHtmlAsync(System.Uri)">
+            <summary>
+            非同步下載指定連結<see cref="T:HtmlAgilityPack.HtmlDocument"/>
+            </summary>
+            <param name="Url">指定連結<see cref="T:System.Uri"/></param>
+            <returns>結果HtmlDocument</returns>
+        </member>
+        <member name="T:MediaGetCore.IExtractor">
+            <summary>
+            媒體剖析器通用接口
+            </summary>
+        </member>
+        <member name="M:MediaGetCore.IExtractor.GetMediaInfos(System.String)">
+            <summary>
+            取得指定連結的影片資訊
+            </summary>
+            <param name="Url">指定連結字串</param>
+            <returns>影片資訊集合</returns>
+        </member>
+        <member name="M:MediaGetCore.IExtractor.GetMediaInfos(System.Uri)">
+            <summary>
+            取得指定連結的影片資訊
+            </summary>
+            <param name="Url">指定連結Uri</param>
+            <returns>影片資訊集合</returns>
+        </member>
+        <member name="M:MediaGetCore.IExtractor.GetMediaInfosAsync(System.String)">
+            <summary>
+            非同步取得指定連結的影片資訊
+            </summary>
+            <param name="Url">指定連結字串</param>
+            <returns>影片資訊集合</returns>
+        </member>
+        <member name="M:MediaGetCore.IExtractor.GetMediaInfosAsync(System.Uri)">
+            <summary>
+            非同步取得指定連結的影片資訊
+            </summary>
+            <param name="Url">指定連結Uri</param>
+            <returns>影片資訊集合</returns>
+        </member>
+        <member name="M:MediaGetCore.IExtractor.IsMatch(System.String)">
+            <summary>
+            檢查指定連結是否符合該Extractor規範
+            </summary>
+            <param name="Url">指定連結字串</param>
+            <returns>檢查結果</returns>
+        </member>
+        <member name="M:MediaGetCore.IExtractor.IsMatch(System.Uri)">
+            <summary>
+            檢查指定連結是否符合該Extractor規範
+            </summary>
+            <param name="Url">指定連結Uri</param>
+            <returns>檢查結果</returns>
+        </member>
+        <member name="E:MediaGetCore.IExtractor.OnProcess">
+            <summary>
+            解析進度事件
+            </summary>
+        </member>
+        <member name="E:MediaGetCore.IExtractor.OnCompleted">
+            <summary>
+            剖析完成事件
+            </summary>
+        </member>
+        <member name="T:MediaGetCore.MediaInfo">
+            <summary>
+            剖析結果的相關資訊
+            </summary>
+        </member>
+        <member name="P:MediaGetCore.MediaInfo.Name">
+            <summary>
+            媒體的名稱或標題
+            </summary>
+        </member>
+        <member name="P:MediaGetCore.MediaInfo.Type">
+            <summary>
+            媒體類型
+            </summary>
+        </member>
+        <member name="P:MediaGetCore.MediaInfo.SourceUrl">
+            <summary>
+            媒體來源網址
+            </summary>
+        </member>
+        <member name="P:MediaGetCore.MediaInfo.RealUrl">
+            <summary>
+            媒體真實位址
+            </summary>
+        </member>
+        <member name="P:MediaGetCore.MediaInfo.Duration">
+            <summary>
+            媒體長度(秒)
+            </summary>
+        </member>
+        <member name="P:MediaGetCore.MediaInfo.Description">
+            <summary>
+            媒體敘述
+            </summary>
+        </member>
+        <member name="P:MediaGetCore.MediaInfo.Thumbnail">
+            <summary>
+            影片縮圖網址
+            </summary>
+        </member>
+        <member name="P:MediaGetCore.MediaInfo.Attributes">
+            <summary>
+            媒體其他相關屬性
+            </summary>
+        </member>
+        <member name="P:MediaGetCore.MediaInfo.ExtractorType">
+            <summary>
+            剖析結果來源類型
+            </summary>
+        </member>
+        <member name="M:MediaGetCore.MediaInfo.Download(System.String)">
+            <summary>
+            下載媒體到指定的路徑
+            </summary>
+            <param name="SavePath">儲存路徑</param>
+            <returns></returns>
+        </member>
+        <member name="M:MediaGetCore.MediaInfo.GetStreamAsync">
+            <summary>
+            取得媒體下載串流
+            </summary>
+            <returns>串流</returns>
+        </member>
+        <member name="M:MediaGetCore.MediaInfo.Clone">
+            <summary>
+            取得剖析結果的深層副本
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MediaGetCore.MediaTypes">
+            <summary>
+            剖析結果的媒體類型
+            </summary>
+        </member>
+        <member name="F:MediaGetCore.MediaTypes.Audio">
+            <summary>
+            音訊
+            </summary>
+        </member>
+        <member name="F:MediaGetCore.MediaTypes.Video">
+            <summary>
+            影音
+            </summary>
+        </member>
+        <member name="T:MediaGetCore.Resource">
+            <summary>
+            靜態資源類型
+            </summary>
+        </member>
+        <member name="P:MediaGetCore.Resource.MatchRegex">
+            <summary>
+            剖析器輸入驗證正規表示式對應
+            </summary>
+        </member>
+        <member name="T:MediaGetCore.Extensions.StringExtension">
+            <summary>
+            針對String類型的擴充
+            </summary>
+        </member>
+        <member name="M:MediaGetCore.Extensions.StringExtension.InnerString(System.String,System.String,System.String)">
+            <summary>
+            在現有字串內群找自<paramref name="Start"/>開始到<paramref name="End"/>結束間的子字串
+            </summary>
+            <param name="Target">擴充對象</param>
+            <param name="Start">起始字串</param>
+            <param name="End">結束字串</param>
+            <returns>子字串</returns>
+        </member>
+        <member name="T:MediaGetCore.Extractors.DailymotionExtractor">
+            <summary>
+            針對Dailymotion的剖析器
+            </summary>
+        </member>
+        <member name="M:MediaGetCore.Extractors.DailymotionExtractor.GetMediaId(System.String)">
+            <summary>
+            取得媒體ID
+            </summary>
+            <param name="Url">網址</param>
+            <returns>媒體ID</returns>
+        </member>
+        <member name="M:MediaGetCore.Extractors.DailymotionExtractor.GetMediaJson(System.String)">
+            <summary>
+            取得媒體JObject
+            </summary>
+            <param name="Url">媒體來源</param>
+            <returns>媒體資訊</returns>
+        </member>
+        <member name="M:MediaGetCore.Extractors.DailymotionExtractor.GetSize(System.String)">
+            <summary>
+            取得影片Size
+            </summary>
+            <param name="RealUrl">媒體來源</param>
+            <returns>影片大小</returns>
+        </member>
+        <member name="T:MediaGetCore.Extractors.XuiteExtractor">
+            <summary>
+            針對Xuite的剖析器
+            </summary>
+        </member>
+        <member name="T:MediaGetCore.Extractors.YoutubeExtractor">
+            <summary>
+            針對Youtube的剖析器
+            </summary>
+        </member>
+        <member name="M:MediaGetCore.Extractors.YoutubeExtractor.GetMediaJObject(HtmlAgilityPack.HtmlDocument)">
+            <summary>
+            自取得的<see cref="T:HtmlAgilityPack.HtmlDocument"/>中取出Youtube影片設定的<see cref="T:Newtonsoft.Json.Linq.JObject"/>
+            </summary>
+            <param name="Document">目標網址的Html</param>
+            <returns>影片設定資訊</returns>
+        </member>
+        <member name="M:MediaGetCore.Extractors.YoutubeExtractor.GetDecodingSignature(System.String)">
+            <summary>
+            自指定的YoutubePlayer之類別庫中取得影片簽章解密函數
+            </summary>
+            <param name="Url">YoutubePlayer類別庫網址</param>
+            <returns>解密函數委派</returns>
+        </member>
+        <member name="M:MediaGetCore.Extractors.YoutubeExtractor.GetStreamFormatList(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            自影片設定資訊中取得影片格式清單
+            </summary>
+            <param name="MediaJObject">影片設定資訊</param>
+            <returns>影片格式清單</returns>
+        </member>
+    </members>
+</doc>

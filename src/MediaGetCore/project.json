@@ -1,34 +1,24 @@
 {
   "version": "1.0.0-*",
-  "description": "MediaGetCore Class Library",
-  "authors": [ "XuPeiYao" ],
-  "tags": [ "" ],
-  "projectUrl": "",
-  "licenseUrl": "",
-  "frameworks": {
-    "net451": {
-      "dependencies": {
-        "System.Reflection": "4.1.0-beta-23516"
-      }
-    },
-    "dotnet5.4": {
-      "dependencies": {
-        "Microsoft.CSharp": "4.0.1-beta-23516",
-        "System.Collections": "4.0.11-beta-23516",
-        "System.Linq": "4.0.1-beta-23516",
-        "System.Runtime": "4.0.21-beta-23516",
-        "System.IO.FileSystem": "4.0.1-beta-23516",
-        "System.Threading": "4.0.11-beta-23516",
-        "System.Diagnostics.Process": "4.1.0-beta-23516",
-        "System.Xml.XmlDocument": "4.0.1-beta-23516",
-        "System.Xml.XPath.XmlDocument": "4.0.1-beta-23516"
-      }
-    }
-  },
   "dependencies": {
     "HtmlAgilityPack.NetCore": "1.4.9.2",
-    "Newtonsoft.Json": "7.0.1",
-    "System.Net.Http": "4.0.1-beta-23516",
-    "System.Text.RegularExpressions": "4.0.11-beta-23516"
+    "NETStandard.Library": "1.6.0",
+    "Newtonsoft.Json": "9.0.1",
+    "System.Diagnostics.Process": "4.1.0",
+    "System.Xml.XmlDocument": "4.0.1",
+    "system.xml.xpath.xmldocument": "4.0.0"
+  },
+  "frameworks": {
+    "netstandard1.6": {
+      "imports": "dnxcore50"
+    },
+    "dnxcore50": {
+      "dependencies": {
+      }
+    }
+    
+  },
+  "buildOptions": {
+    "xmlDoc": true
   }
 }
