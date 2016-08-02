@@ -1,0 +1,12 @@
+C:\Users\XuPeiYao\Documents\GitHub\MediaGetCore\Net46NugetTest\bin\Debug\Net46NugetTest.exe.config
+C:\Users\XuPeiYao\Documents\GitHub\MediaGetCore\Net46NugetTest\obj\Debug\Net46NugetTest.csprojResolveAssemblyReference.cache
+C:\Users\XuPeiYao\Documents\GitHub\MediaGetCore\Net46NugetTest\bin\Debug\Net46NugetTest.exe
+C:\Users\XuPeiYao\Documents\GitHub\MediaGetCore\Net46NugetTest\bin\Debug\Net46NugetTest.pdb
+C:\Users\XuPeiYao\Documents\GitHub\MediaGetCore\Net46NugetTest\bin\Debug\HtmlAgilityPack.NetCore.dll
+C:\Users\XuPeiYao\Documents\GitHub\MediaGetCore\Net46NugetTest\bin\Debug\MediaGetCore.dll
+C:\Users\XuPeiYao\Documents\GitHub\MediaGetCore\Net46NugetTest\bin\Debug\Newtonsoft.Json.dll
+C:\Users\XuPeiYao\Documents\GitHub\MediaGetCore\Net46NugetTest\bin\Debug\MediaGetCore.pdb
+C:\Users\XuPeiYao\Documents\GitHub\MediaGetCore\Net46NugetTest\bin\Debug\MediaGetCore.xml
+C:\Users\XuPeiYao\Documents\GitHub\MediaGetCore\Net46NugetTest\bin\Debug\Newtonsoft.Json.xml
+C:\Users\XuPeiYao\Documents\GitHub\MediaGetCore\Net46NugetTest\obj\Debug\Net46NugetTest.exe
+C:\Users\XuPeiYao\Documents\GitHub\MediaGetCore\Net46NugetTest\obj\Debug\Net46NugetTest.pdb
