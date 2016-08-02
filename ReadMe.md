@@ -20,6 +20,25 @@
 PM> Install-Package MediaGetCore
 ```
 
+### 快速上手
+```csharp
+using MediaGetCore;
+...(something)...
+ExtractorAdapter adp = new ExtractorAdapter();
+adp.IncludeAllExtractors();//引入所有的支援項目
+
+var infos = adp.GetMediaInfos("https://www.youtube.com/watch?v=b1P-SQASlMs");
+var firstRealUrl = infos.First().RealUrl;
+```
+當然您可以使用單一影音平台的剖析器進行影音剖析的動作。
+```csharp
+using MediaGetCore.Extractors;
+...(something)...
+YoutubeExtractor yt = new YoutubeExtractor();
+var infos = yt.GetMediaInfos("https://www.youtube.com/watch?v=b1P-SQASlMs");
+var firstRealUrl = infos.First().RealUrl;
+```
+
 ### 支援
 1. Youtube
 2. Xuite
