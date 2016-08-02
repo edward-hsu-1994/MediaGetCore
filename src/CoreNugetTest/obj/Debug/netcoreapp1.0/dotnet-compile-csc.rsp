@@ -7,8 +7,8 @@
 -debug:full
 -nostdlib
 -nologo
-"C:\Users\XuPeiYao\Documents\GitHub\MediaGetCore\src\CoreNugetText\obj\Debug\netcoreapp1.0\dotnet-compile.assemblyinfo.cs"
--out:"C:\Users\XuPeiYao\Documents\GitHub\MediaGetCore\src\CoreNugetText\bin\Debug\netcoreapp1.0\CoreNugetText.dll"
+"C:\Users\XuPeiYao\Documents\GitHub\MediaGetCore\src\CoreNugetTest\obj\Debug\netcoreapp1.0\dotnet-compile.assemblyinfo.cs"
+-out:"C:\Users\XuPeiYao\Documents\GitHub\MediaGetCore\src\CoreNugetTest\bin\Debug\netcoreapp1.0\CoreNugetTest.dll"
 -r:"C:\Users\XuPeiYao\.nuget\packages\HtmlAgilityPack.NetCore\1.5.0.1\lib\netstandard1.3\HtmlAgilityPack.NetCore.dll"
 -r:"C:\Users\XuPeiYao\.nuget\packages\Microsoft.CSharp\4.0.1\ref\netstandard1.0\Microsoft.CSharp.dll"
 -r:"C:\Users\XuPeiYao\.nuget\packages\Microsoft.VisualBasic\10.0.1\ref\netstandard1.1\Microsoft.VisualBasic.dll"
@@ -89,5 +89,5 @@
 -r:"C:\Users\XuPeiYao\.nuget\packages\System.Xml.XPath\4.0.1\ref\netstandard1.3\System.Xml.XPath.dll"
 -r:"C:\Users\XuPeiYao\.nuget\packages\system.xml.xpath.xmldocument\4.0.0\ref\dotnet\System.Xml.XPath.XmlDocument.dll"
 -r:"C:\Users\XuPeiYao\Documents\GitHub\MediaGetCore\src\MediaGetCore\bin\Debug\netcoreapp1.0\MediaGetCore.dll"
-"C:\Users\XuPeiYao\Documents\GitHub\MediaGetCore\src\CoreNugetText\Program.cs"
-"C:\Users\XuPeiYao\Documents\GitHub\MediaGetCore\src\CoreNugetText\Properties\AssemblyInfo.cs"
+"C:\Users\XuPeiYao\Documents\GitHub\MediaGetCore\src\CoreNugetTest\Program.cs"
+"C:\Users\XuPeiYao\Documents\GitHub\MediaGetCore\src\CoreNugetTest\Properties\AssemblyInfo.cs"

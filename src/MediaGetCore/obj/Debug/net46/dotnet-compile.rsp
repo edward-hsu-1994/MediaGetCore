@@ -10,9 +10,9 @@
 --generate-xml-documentation:True
 --output-name:MediaGetCore
 --title:MediaGetCore
---file-version:1.0.1.0
---version:1.0.1.0
---informational-version:1.0.1
+--file-version:1.0.2.0
+--version:1.0.2.0
+--informational-version:1.0.2
 --neutral-language:zh-TW
 --target-framework:.NETFramework,Version=v4.6
 --reference:C:\Users\XuPeiYao\.nuget\packages\HtmlAgilityPack.NetCore\1.5.0.1\lib\net45\HtmlAgilityPack.NetCore.dll

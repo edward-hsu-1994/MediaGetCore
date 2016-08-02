@@ -2127,7 +2127,7 @@
           "lib/dotnet/System.Xml.XPath.XmlDocument.dll": {}
         }
       },
-      "MediaGetCore/1.0.1": {
+      "MediaGetCore/1.0.2": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v1.0",
         "dependencies": {
@@ -6874,7 +6874,7 @@
         "system.xml.xpath.xmldocument.nuspec"
       ]
     },
-    "MediaGetCore/1.0.1": {
+    "MediaGetCore/1.0.2": {
       "type": "project",
       "path": "../MediaGetCore/project.json",
       "msbuildProject": "../MediaGetCore/MediaGetCore.xproj"

@@ -1,5 +1,5 @@
---temp-output:C:\Users\XuPeiYao\Documents\GitHub\MediaGetCore\src\CoreNugetText\obj\Debug\netcoreapp1.0\
---out:C:\Users\XuPeiYao\Documents\GitHub\MediaGetCore\src\CoreNugetText\bin\Debug\netcoreapp1.0\CoreNugetText.dll
+--temp-output:C:\Users\XuPeiYao\Documents\GitHub\MediaGetCore\src\CoreNugetTest\obj\Debug\netcoreapp1.0\
+--out:C:\Users\XuPeiYao\Documents\GitHub\MediaGetCore\src\CoreNugetTest\bin\Debug\netcoreapp1.0\CoreNugetTest.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -8,7 +8,7 @@
 --suppress-warning:CS1705
 --optimize:False
 --emit-entry-point:True
---output-name:CoreNugetText
+--output-name:CoreNugetTest
 --file-version:1.0.0.0
 --version:1.0.0.0
 --informational-version:1.0.0
@@ -93,5 +93,5 @@
 --reference:C:\Users\XuPeiYao\.nuget\packages\System.Xml.XPath\4.0.1\ref\netstandard1.3\System.Xml.XPath.dll
 --reference:C:\Users\XuPeiYao\.nuget\packages\system.xml.xpath.xmldocument\4.0.0\ref\dotnet\System.Xml.XPath.XmlDocument.dll
 --reference:C:\Users\XuPeiYao\Documents\GitHub\MediaGetCore\src\MediaGetCore\bin\Debug\netcoreapp1.0\MediaGetCore.dll
-C:\Users\XuPeiYao\Documents\GitHub\MediaGetCore\src\CoreNugetText\Program.cs
-C:\Users\XuPeiYao\Documents\GitHub\MediaGetCore\src\CoreNugetText\Properties\AssemblyInfo.cs
+C:\Users\XuPeiYao\Documents\GitHub\MediaGetCore\src\CoreNugetTest\Program.cs
+C:\Users\XuPeiYao\Documents\GitHub\MediaGetCore\src\CoreNugetTest\Properties\AssemblyInfo.cs

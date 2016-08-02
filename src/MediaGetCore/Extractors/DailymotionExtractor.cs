@@ -83,11 +83,12 @@ namespace MediaGetCore.Extractors{
             string MediaJs = null;
             foreach (var Script in Scripts) {
                 MediaJs = Script.InnerHtml;
-                if (MediaJs != null && MediaJs.IndexOf("var info") > -1) break;
+                if (MediaJs != null && MediaJs.IndexOf("document.getElementById('player'), ") > -1) break;
             }
 
-
-            MediaJs = "var document={getElementById:function(){return null;}},parent,DM_DispatchEvent={dispatch:function(){}},window={playerV5:{}},location={host:{match:function(){return false;}},search:''},DailymotionPlayer={},console={},dmp={create:function(a,b){return b;}};" + MediaJs + ";console.log(JSON.stringify(window.playerV5));";
+            MediaJs = MediaJs.InnerString("document.getElementById('player'), ", ");");
+            MediaJs = $"console.log(JSON.stringify({MediaJs}))";
+            //MediaJs = "var document={getElementById:function(){return null;}},parent,DM_DispatchEvent={dispatch:function(){}},window={playerV5:{}},location={host:{match:function(){return false;}},search:''},DailymotionPlayer={},console={},dmp={create:function(a,b){return b;}};" + MediaJs + ";console.log(JSON.stringify(window.playerV5));";
             #endregion
             return JObject.Parse(JsFactory.RunScript(MediaJs));
         }
