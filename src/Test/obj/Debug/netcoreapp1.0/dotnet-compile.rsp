@@ -1,5 +1,5 @@
---temp-output:c:\users\xupeiyao\Documents\GitHub\MediaGetCore\src\Test\obj\Debug\netcoreapp1.0\
---out:c:\users\xupeiyao\Documents\GitHub\MediaGetCore\src\Test\bin\Debug\netcoreapp1.0\Test.dll
+--temp-output:C:\Users\XuPeiYao\Documents\GitHub\MediaGetCore\src\Test\obj\Debug\netcoreapp1.0\
+--out:C:\Users\XuPeiYao\Documents\GitHub\MediaGetCore\src\Test\bin\Debug\netcoreapp1.0\Test.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -13,7 +13,7 @@
 --version:1.0.0.0
 --informational-version:1.0.0
 --target-framework:.NETCoreApp,Version=v1.0
---reference:C:\Users\XuPeiYao\.nuget\packages\HtmlAgilityPack.NetCore\1.4.9.2\lib\dnxcore50\HtmlAgilityPack.NetCore.dll
+--reference:C:\Users\XuPeiYao\.nuget\packages\HtmlAgilityPack.NetCore\1.5.0.1\lib\netstandard1.3\HtmlAgilityPack.NetCore.dll
 --reference:C:\Users\XuPeiYao\.nuget\packages\Microsoft.CSharp\4.0.1\ref\netstandard1.0\Microsoft.CSharp.dll
 --reference:C:\Users\XuPeiYao\.nuget\packages\Microsoft.VisualBasic\10.0.1\ref\netstandard1.1\Microsoft.VisualBasic.dll
 --reference:C:\Users\XuPeiYao\.nuget\packages\Microsoft.Win32.Primitives\4.0.1\ref\netstandard1.3\Microsoft.Win32.Primitives.dll
@@ -92,6 +92,6 @@
 --reference:C:\Users\XuPeiYao\.nuget\packages\System.Xml.XmlDocument\4.0.1\ref\netstandard1.3\System.Xml.XmlDocument.dll
 --reference:C:\Users\XuPeiYao\.nuget\packages\System.Xml.XPath\4.0.1\ref\netstandard1.3\System.Xml.XPath.dll
 --reference:C:\Users\XuPeiYao\.nuget\packages\system.xml.xpath.xmldocument\4.0.0\ref\dotnet\System.Xml.XPath.XmlDocument.dll
---reference:c:\users\xupeiyao\Documents\GitHub\MediaGetCore\src\MediaGetCore\bin\Debug\netstandard1.6\MediaGetCore.dll
-c:\users\xupeiyao\Documents\GitHub\MediaGetCore\src\Test\Program.cs
-c:\users\xupeiyao\Documents\GitHub\MediaGetCore\src\Test\Properties\AssemblyInfo.cs
+--reference:C:\Users\XuPeiYao\Documents\GitHub\MediaGetCore\src\MediaGetCore\bin\Debug\netstandard1.6\MediaGetCore.dll
+C:\Users\XuPeiYao\Documents\GitHub\MediaGetCore\src\Test\Program.cs
+C:\Users\XuPeiYao\Documents\GitHub\MediaGetCore\src\Test\Properties\AssemblyInfo.cs

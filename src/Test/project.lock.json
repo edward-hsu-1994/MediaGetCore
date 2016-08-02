@@ -3,22 +3,24 @@
   "version": 2,
   "targets": {
     ".NETCoreApp,Version=v1.0": {
-      "HtmlAgilityPack.NetCore/1.4.9.2": {
+      "HtmlAgilityPack.NetCore/1.5.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.CSharp": "4.0.0",
-          "System.Collections": "4.0.10",
-          "System.Linq": "4.0.0",
-          "System.Runtime": "4.0.20",
-          "System.Text.RegularExpressions": "4.0.10",
-          "System.Threading": "4.0.10",
-          "System.Xml.XPath": "4.0.0"
+          "System.Collections": "4.0.11",
+          "System.Diagnostics.Debug": "4.0.11",
+          "System.Linq": "4.1.0",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Runtime.InteropServices": "4.1.0",
+          "System.Text.RegularExpressions": "4.1.0",
+          "System.Threading": "4.0.11",
+          "System.Xml.XPath": "4.0.1"
         },
         "compile": {
-          "lib/dnxcore50/HtmlAgilityPack.NetCore.dll": {}
+          "lib/netstandard1.3/HtmlAgilityPack.NetCore.dll": {}
         },
         "runtime": {
-          "lib/dnxcore50/HtmlAgilityPack.NetCore.dll": {}
+          "lib/netstandard1.3/HtmlAgilityPack.NetCore.dll": {}
         }
       },
       "Libuv/1.9.0": {
@@ -2129,7 +2131,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v1.6",
         "dependencies": {
-          "HtmlAgilityPack.NetCore": "1.4.9.2",
+          "HtmlAgilityPack.NetCore": "1.5.0.1",
           "NETStandard.Library": "1.6.0",
           "Newtonsoft.Json": "9.0.1",
           "System.Diagnostics.Process": "4.1.0",
@@ -2146,21 +2148,15 @@
     }
   },
   "libraries": {
-    "HtmlAgilityPack.NetCore/1.4.9.2": {
-      "sha512": "/JkZBXNwFoJJTwgk9b4AG2FqM70RX9u1nr437PQv3mId1yzYL651+ftM+MIrl3ilWJy4ye+tTYMXB5Dqsd0wmQ==",
+    "HtmlAgilityPack.NetCore/1.5.0.1": {
+      "sha512": "N6FUlFbidfiWu1TcrNDQufaU5TbZ2RRn+kYHjwsLxcklQU8Cnmul+pTn2clKausZRHeFVxGp2ZECIWuDvot8Hg==",
       "type": "package",
-      "path": "HtmlAgilityPack.NetCore/1.4.9.2",
+      "path": "HtmlAgilityPack.NetCore/1.5.0.1",
       "files": [
-        "HtmlAgilityPack.NetCore.1.4.9.2.nupkg.sha512",
+        "HtmlAgilityPack.NetCore.1.5.0.1.nupkg.sha512",
         "HtmlAgilityPack.NetCore.nuspec",
-        "lib/dnx452/HtmlAgilityPack.NetCore.dll",
-        "lib/dnx452/HtmlAgilityPack.NetCore.xml",
-        "lib/dnxcore50/HtmlAgilityPack.NetCore.dll",
-        "lib/dnxcore50/HtmlAgilityPack.NetCore.xml",
-        "lib/dotnet/HtmlAgilityPack.NetCore.dll",
-        "lib/dotnet/HtmlAgilityPack.NetCore.xml",
         "lib/net45/HtmlAgilityPack.NetCore.dll",
-        "lib/net45/HtmlAgilityPack.NetCore.xml"
+        "lib/netstandard1.3/HtmlAgilityPack.NetCore.dll"
       ]
     },
     "Libuv/1.9.0": {

@@ -1,16 +1,15 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v1.6/",
-    "signature": "fa822588cb35bc279f867d4312602d6fe0dfb507"
+    "signature": "5673ea9ffa1da1d761f1faeabae3f9ea49cdfc78"
   },
   "compilationOptions": {},
   "targets": {
     ".NETStandard,Version=v1.6": {},
     ".NETStandard,Version=v1.6/": {
-      "MediaGetCore/1.0.0": {
+      "MediaGetCore/1.0.0-1": {
         "dependencies": {
-          "docfx.msbuild": "2.1.0",
-          "HtmlAgilityPack.NetCore": "1.4.9.2",
+          "HtmlAgilityPack.NetCore": "1.5.0.1",
           "NETStandard.Library": "1.6.0",
           "Newtonsoft.Json": "9.0.1",
           "System.Diagnostics.Process": "4.1.0",
@@ -21,19 +20,20 @@
           "MediaGetCore.dll": {}
         }
       },
-      "docfx.msbuild/2.1.0": {},
-      "HtmlAgilityPack.NetCore/1.4.9.2": {
+      "HtmlAgilityPack.NetCore/1.5.0.1": {
         "dependencies": {
-          "Microsoft.CSharp": "4.0.1",
           "System.Collections": "4.0.11",
+          "System.Diagnostics.Debug": "4.0.11",
           "System.Linq": "4.1.0",
           "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Runtime.InteropServices": "4.1.0",
           "System.Text.RegularExpressions": "4.1.0",
           "System.Threading": "4.0.11",
-          "System.Xml.XPath": "4.0.0"
+          "System.Xml.XPath": "4.0.1"
         },
         "runtime": {
-          "lib/dnxcore50/HtmlAgilityPack.NetCore.dll": {}
+          "lib/netstandard1.3/HtmlAgilityPack.NetCore.dll": {}
         }
       },
       "Microsoft.CSharp/4.0.1": {
@@ -898,7 +898,7 @@
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
       },
-      "System.Xml.XPath/4.0.0": {
+      "System.Xml.XPath/4.0.1": {
         "dependencies": {
           "System.Collections": "4.0.11",
           "System.Diagnostics.Debug": "4.0.11",
@@ -911,7 +911,7 @@
           "System.Xml.ReaderWriter": "4.0.11"
         },
         "runtime": {
-          "lib/dotnet/System.Xml.XPath.dll": {}
+          "lib/netstandard1.3/System.Xml.XPath.dll": {}
         }
       },
       "system.xml.xpath.xmldocument/4.0.0": {
@@ -924,7 +924,7 @@
           "System.Runtime.Extensions": "4.1.0",
           "System.Threading": "4.0.11",
           "System.Xml.ReaderWriter": "4.0.11",
-          "System.Xml.XPath": "4.0.0",
+          "System.Xml.XPath": "4.0.1",
           "System.Xml.XmlDocument": "4.0.1"
         },
         "runtime": {
@@ -934,20 +934,15 @@
     }
   },
   "libraries": {
-    "MediaGetCore/1.0.0": {
+    "MediaGetCore/1.0.0-1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "docfx.msbuild/2.1.0": {
+    "HtmlAgilityPack.NetCore/1.5.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ISfiWbBPh/TtApDpd8WnKbwbY6sPUIIaUVsY6KR26NjcYarjT263G/Bc8+mEKrG7gWDGd9znwgnH+t4pitKZGw=="
-    },
-    "HtmlAgilityPack.NetCore/1.4.9.2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-/JkZBXNwFoJJTwgk9b4AG2FqM70RX9u1nr437PQv3mId1yzYL651+ftM+MIrl3ilWJy4ye+tTYMXB5Dqsd0wmQ=="
+      "sha512": "sha512-N6FUlFbidfiWu1TcrNDQufaU5TbZ2RRn+kYHjwsLxcklQU8Cnmul+pTn2clKausZRHeFVxGp2ZECIWuDvot8Hg=="
     },
     "Microsoft.CSharp/4.0.1": {
       "type": "package",
@@ -1299,10 +1294,10 @@
       "serviceable": true,
       "sha512": "sha512-2eZu6IP+etFVBBFUFzw2w6J21DqIN5eL9Y8r8JfJWUmV28Z5P0SNU01oCisVHQgHsDhHPnmq2s1hJrJCFZWloQ=="
     },
-    "System.Xml.XPath/4.0.0": {
+    "System.Xml.XPath/4.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-jalVwhZSwErcW28NZOE3Dqb6B1XA4DAsL15JvykYIKXtXYQU8PI5GXssjF5G0bLm8/6Gko2e1SOjRs/MoeAKrw=="
+      "sha512": "sha512-UWd1H+1IJ9Wlq5nognZ/XJdyj8qPE4XufBUkAW59ijsCPjZkZe0MUzKKJFBr+ZWBe5Wq1u1d5f2CYgE93uH7DA=="
     },
     "system.xml.xpath.xmldocument/4.0.0": {
       "type": "package",

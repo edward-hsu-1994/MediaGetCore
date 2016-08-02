@@ -12,8 +12,16 @@ namespace MediaGetCore{
     /// 已簡化輸入連結檢查方式與簡易非同步化方法的類別
     /// </summary>
     public abstract class ExtractorBase : IExtractor {
+        /// <summary>
+        /// 剖析過程進度事件
+        /// </summary>
         public abstract event ProcessEvent OnProcess;
+
+        /// <summary>
+        /// 剖析完成事件
+        /// </summary>
         public abstract event CompletedEvent OnCompleted;
+
         /// <summary>
         /// 取得指定連結的影片資訊
         /// </summary>

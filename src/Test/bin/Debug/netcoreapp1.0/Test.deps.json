@@ -1,22 +1,22 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.0",
-    "signature": "d9cc328e0eeeae9ca71ad777f2f6de5a3aaacf0b"
+    "signature": "7770cd4999729fd991f42839224fef8958c90582"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v1.0": {
       "Test/1.0.0": {
         "dependencies": {
-          "MediaGetCore": "1.0.0"
+          "MediaGetCore": "1.0.0-1"
         },
         "runtime": {
           "Test.dll": {}
         }
       },
-      "HtmlAgilityPack.NetCore/1.4.9.2": {
+      "HtmlAgilityPack.NetCore/1.5.0.1": {
         "runtime": {
-          "lib/dnxcore50/HtmlAgilityPack.NetCore.dll": {}
+          "lib/netstandard1.3/HtmlAgilityPack.NetCore.dll": {}
         }
       },
       "Newtonsoft.Json/9.0.1": {
@@ -37,9 +37,9 @@
           "lib/dotnet/System.Xml.XPath.XmlDocument.dll": {}
         }
       },
-      "MediaGetCore/1.0.0": {
+      "MediaGetCore/1.0.0-1": {
         "dependencies": {
-          "HtmlAgilityPack.NetCore": "1.4.9.2",
+          "HtmlAgilityPack.NetCore": "1.5.0.1",
           "Newtonsoft.Json": "9.0.1",
           "system.xml.xpath.xmldocument": "4.0.0"
         },
@@ -55,10 +55,10 @@
       "serviceable": false,
       "sha512": ""
     },
-    "HtmlAgilityPack.NetCore/1.4.9.2": {
+    "HtmlAgilityPack.NetCore/1.5.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-/JkZBXNwFoJJTwgk9b4AG2FqM70RX9u1nr437PQv3mId1yzYL651+ftM+MIrl3ilWJy4ye+tTYMXB5Dqsd0wmQ=="
+      "sha512": "sha512-N6FUlFbidfiWu1TcrNDQufaU5TbZ2RRn+kYHjwsLxcklQU8Cnmul+pTn2clKausZRHeFVxGp2ZECIWuDvot8Hg=="
     },
     "Newtonsoft.Json/9.0.1": {
       "type": "package",
@@ -75,7 +75,7 @@
       "serviceable": true,
       "sha512": "sha512-toGFsezsdAJ3Fkau0l386iGBg3qfYauQrM4haX1nWPYnUOWb0hXfAEVIi47/Ke4ET3gl9h9ZppKiws8QWeJVyQ=="
     },
-    "MediaGetCore/1.0.0": {
+    "MediaGetCore/1.0.0-1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

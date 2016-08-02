@@ -128,7 +128,7 @@ namespace MediaGetCore.Extractors{
                     ";}";
 
                 string functionRefName = functionBody.InnerString(";", ".");
-                string functionRef = playerScript.InnerString($"var {functionRefName}=", ";var ");
+                string functionRef = playerScript.InnerString($"var {functionRefName}=", "};") + "}";
 
 
                 string args = functionBody.InnerString("(", ")");

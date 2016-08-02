@@ -20,9 +20,24 @@
             </summary>
             <param name="Extractors">初始化時加入的支援項目</param>
         </member>
+        <member name="M:MediaGetCore.ExtractorAdapter.IncludeAllExtractors">
+            <summary>
+            引入所有的內置剖析器
+            </summary>
+        </member>
         <member name="T:MediaGetCore.ExtractorBase">
             <summary>
             已簡化輸入連結檢查方式與簡易非同步化方法的類別
+            </summary>
+        </member>
+        <member name="E:MediaGetCore.ExtractorBase.OnProcess">
+            <summary>
+            剖析過程進度事件
+            </summary>
+        </member>
+        <member name="E:MediaGetCore.ExtractorBase.OnCompleted">
+            <summary>
+            剖析完成事件
             </summary>
         </member>
         <member name="M:MediaGetCore.ExtractorBase.GetMediaInfos(System.String)">
@@ -273,6 +288,13 @@
             <param name="Start">起始字串</param>
             <param name="End">結束字串</param>
             <returns>子字串</returns>
+        </member>
+        <member name="M:MediaGetCore.Extensions.TypeExtension.GetBaseTypes(System.Reflection.TypeInfo)">
+            <summary>
+            取得型別的繼承鏈
+            </summary>
+            <param name="type">起始型別</param>
+            <returns>繼承鏈集合</returns>
         </member>
         <member name="T:MediaGetCore.Extractors.DailymotionExtractor">
             <summary>
