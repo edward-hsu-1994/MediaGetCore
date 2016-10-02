@@ -67,7 +67,9 @@ namespace MediaGetCore.Extractors{
         /// <returns>媒體ID</returns>
         private string GetMediaId(string Url) {
             string result = new Uri(Url).Segments.Last<string>();
-            result = result.Substring(0, result.IndexOf("_"));
+            try {
+                result = result.Substring(0, result.IndexOf("_"));
+            } catch { }
             return result;
         }
 

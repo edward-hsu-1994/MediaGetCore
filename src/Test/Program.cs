@@ -10,10 +10,10 @@ namespace Test {
             ExtractorAdapter adp = new ExtractorAdapter();
             adp.IncludeAllExtractors();
 
-            Test(adp, "https://www.youtube.com/watch?v=b1P-SQASlMs");
-            Test(adp, "http://vlog.xuite.net/play/N2gzU21jLTE2MDQ4MDQuZmx2");
-            Test(adp, "http://vlog.xuite.net/play/QkIyTVNtLTg3MTg0Mi5mbHY=");
-            Test(adp, "http://www.dailymotion.com/video/x2zhhw1_%E6%A2%81%E9%9D%9C%E8%8C%B9-%E5%8F%AF%E6%A8%82%E6%88%92%E6%8C%87_music");
+            //Test(adp, "https://www.youtube.com/watch?v=b1P-SQASlMs");
+            //Test(adp, "http://vlog.xuite.net/play/N2gzU21jLTE2MDQ4MDQuZmx2");
+            //Test(adp, "http://vlog.xuite.net/play/QkIyTVNtLTg3MTg0Mi5mbHY=");
+            Test(adp, "http://www.dailymotion.com/video/x3lada6");
             Console.ReadKey();
         }
 
