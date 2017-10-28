@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
+      "EzCoreKit.Extensions/3.0.0-CI00031": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/EzCoreKit.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/EzCoreKit.Extensions.dll": {}
+        }
+      },
       "HtmlAgilityPack/1.6.2": {
         "type": "package",
         "dependencies": {
@@ -1221,6 +1230,16 @@
     }
   },
   "libraries": {
+    "EzCoreKit.Extensions/3.0.0-CI00031": {
+      "sha512": "AwElje2Xu4881sPJQpP69IvzpRv6CoQyLVv6MUb6RUPy+uoRM/cWlU1d4q6GHynxrwQKzTIXA8njA+lbzamRmQ==",
+      "type": "package",
+      "path": "ezcorekit.extensions/3.0.0-ci00031",
+      "files": [
+        "ezcorekit.extensions.3.0.0-ci00031.nupkg.sha512",
+        "ezcorekit.extensions.nuspec",
+        "lib/netstandard2.0/EzCoreKit.Extensions.dll"
+      ]
+    },
     "HtmlAgilityPack/1.6.2": {
       "sha512": "d1aRn9leFG3ISpfy0GMnFVHegKB3X6rIdkF/E+20+DOCssZuz4FDshEocV6P8K86dOQzILnISprKH8l6QM3bfQ==",
       "type": "package",
@@ -4546,6 +4565,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "EzCoreKit.Extensions >= 3.0.0-CI00031",
       "HtmlAgilityPack >= 1.6.2",
       "NETStandard.Library >= 2.0.0",
       "Newtonsoft.Json >= 10.0.3"
@@ -4600,6 +4620,10 @@
             "target": "Package",
             "version": "2.0.0",
             "autoReferenced": true
+          },
+          "EzCoreKit.Extensions": {
+            "target": "Package",
+            "version": "3.0.0-CI00031"
           },
           "HtmlAgilityPack": {
             "target": "Package",
