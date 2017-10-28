@@ -1,0 +1,6 @@
+D:\Projects\MediaGetCore\MediaGetCore\bin\Debug\netstandard2.0\MediaGetCore.deps.json
+D:\Projects\MediaGetCore\MediaGetCore\bin\Debug\netstandard2.0\MediaGetCore.dll
+D:\Projects\MediaGetCore\MediaGetCore\obj\Debug\netstandard2.0\MediaGetCore.csprojResolveAssemblyReference.cache
+D:\Projects\MediaGetCore\MediaGetCore\obj\Debug\netstandard2.0\MediaGetCore.csproj.CoreCompileInputs.cache
+D:\Projects\MediaGetCore\MediaGetCore\obj\Debug\netstandard2.0\MediaGetCore.AssemblyInfoInputs.cache
+D:\Projects\MediaGetCore\MediaGetCore\obj\Debug\netstandard2.0\MediaGetCore.AssemblyInfo.cs
