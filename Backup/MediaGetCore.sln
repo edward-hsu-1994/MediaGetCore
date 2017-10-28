@@ -1,22 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26730.10
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{ED456CEB-4D3D-4DB0-B7BD-81FBBA545CA8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1203FB7D-6EFD-4F99-8A24-6847459B56DB}"
 	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
 		ReadMe.md = ReadMe.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediaGetCore", "src\MediaGetCore\MediaGetCore.csproj", "{2A76A056-B6E5-42C7-AC68-D0F7AA2F8908}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "MediaGetCore", "src\MediaGetCore\MediaGetCore.xproj", "{2A76A056-B6E5-42C7-AC68-D0F7AA2F8908}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net46NugetTest", "Net46NugetTest\Net46NugetTest.csproj", "{652593DD-E1C1-4589-B4F6-7A10AB71C201}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreNugetTest", "src\CoreNugetTest\CoreNugetTest.csproj", "{EA2627FA-22E5-4337-BB97-D01E8690CBDA}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "CoreNugetTest", "src\CoreNugetTest\CoreNugetTest.xproj", "{EA2627FA-22E5-4337-BB97-D01E8690CBDA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "src\Test\Test.csproj", "{E6EDAE63-BC21-4D23-9F50-30C8E2FBDD72}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Test", "src\Test\Test.xproj", "{E6EDAE63-BC21-4D23-9F50-30C8E2FBDD72}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,8 +50,5 @@ Global
 		{652593DD-E1C1-4589-B4F6-7A10AB71C201} = {ED456CEB-4D3D-4DB0-B7BD-81FBBA545CA8}
 		{EA2627FA-22E5-4337-BB97-D01E8690CBDA} = {ED456CEB-4D3D-4DB0-B7BD-81FBBA545CA8}
 		{E6EDAE63-BC21-4D23-9F50-30C8E2FBDD72} = {ED456CEB-4D3D-4DB0-B7BD-81FBBA545CA8}
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {AC029515-4C8F-4C2A-8292-C746FAD63797}
 	EndGlobalSection
 EndGlobal
