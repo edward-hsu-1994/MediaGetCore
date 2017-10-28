@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -45,6 +46,16 @@ namespace MediaGetCore.Helpers {
             return htmlDoc;
         }
 
+        /// <summary>
+        /// 取得指定<see cref="Uri"/>字串目標下載串流
+        /// </summary>
+        /// <param name="url">目標網址</param>
+        /// <returns>下載串流</returns>
+        public static async Task<Stream> GetDownloadStreamAsync(string url) {
+            HttpClient client = new HttpClient();
+            return await client.GetStreamAsync(url);
+        }
+
         #region 多載
 
         /// <summary>
@@ -73,6 +84,15 @@ namespace MediaGetCore.Helpers {
         /// <returns>下載<see cref="HtmlDocument"/>內容</returns>
         public static async Task<HtmlDocument> DownloadHtmlAsync(Uri url, Encoding encoding = null) {
             return await DownloadHtmlAsync(url.OriginalString, encoding);
+        }
+
+        /// <summary>
+        /// 取得指定<see cref="Uri"/>目標下載串流
+        /// </summary>
+        /// <param name="url">目標網址</param>
+        /// <returns>下載串流</returns>
+        public static async Task<Stream> GetDownloadStreamAsync(Uri url) {
+            return await GetDownloadStreamAsync(url.OriginalString);
         }
 
         #endregion
