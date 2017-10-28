@@ -13,7 +13,7 @@ namespace MediaGetCore.Extensnions {
         /// <param name="obj"><see cref="IExtractor"/>實例</param>
         /// <param name="url">目標網址</param>
         /// <returns>媒體剖析結果陣列</returns>
-        public static MediaInfo[] GetMediaInfo(this IExtractor obj, string url) {
+        public static MediaInfo[] GetMediaInfos(this IExtractor obj, string url) {
             return obj.GetMediaInfosAsync(url).GetAwaiter().GetResult();
         }
 
@@ -23,7 +23,7 @@ namespace MediaGetCore.Extensnions {
         /// <param name="obj"><see cref="IExtractor"/>實例</param>
         /// <param name="url">目標網址</param>
         /// <returns>媒體剖析結果陣列</returns>
-        public static MediaInfo[] GetMediaInfo(this IExtractor obj, Uri url) {
+        public static MediaInfo[] GetMediaInfos(this IExtractor obj, Uri url) {
             return obj.GetMediaInfosAsync(url).GetAwaiter().GetResult();
         }
     }
