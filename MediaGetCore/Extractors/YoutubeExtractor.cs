@@ -109,7 +109,7 @@ namespace MediaGetCore.Extractors {
                                    where t.InnerHtml?.IndexOf("var ytplayer") > -1
                                    select t.InnerHtml).First();
             var jsonString = JavascriptHelper.Run(
-                "var window={};" + playerConfig + ";JSON.stringify(ytplayer.config);"
+                    "var window={};" + playerConfig + ";JSON.stringify(ytplayer.config);"
                 );
             return JObject.Parse(jsonString);
         }

@@ -13,7 +13,15 @@ namespace MediaGetCore.Test {
             Instance = new T();
         }
 
-        public abstract Task GetMediaInfosAsync(string url);
+        public virtual async Task GetMediaInfosAsync(string url) {
+            var mediaInfos = await Instance.GetMediaInfosAsync(url);
+            Assert.NotEmpty(mediaInfos);
+
+            Random rand = new Random((int)DateTime.Now.Ticks);
+            var selectedMediaInfo = mediaInfos[rand.Next(0, mediaInfos.Length)];
+
+            Assert.True(TestUrlStatusCodeOK(selectedMediaInfo.RealUrl));
+        }
 
 
         public bool TestUrlStatusCodeOK(Uri url) {
