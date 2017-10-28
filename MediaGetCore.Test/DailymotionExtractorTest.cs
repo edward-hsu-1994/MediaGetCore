@@ -12,7 +12,6 @@ namespace MediaGetCore.Test {
     public class DailymotionExtractorTest : ExtractorTestBase<DailymotionExtractor> {
         [Theory(DisplayName = "Extractors.Dailymotion")]
         [InlineData("http://www.dailymotion.com/video/x5nybzp")]
-        [InlineData("http://www.dailymotion.com/video/x666ygp")]
         [InlineData("http://www.dailymotion.com/video/x659a37")]
         [InlineData("http://www.dailymotion.com/video/x61ki70")]
         [InlineData("http://www.dailymotion.com/video/x5y3td9")]
