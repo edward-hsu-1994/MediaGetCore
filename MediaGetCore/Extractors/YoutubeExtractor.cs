@@ -45,7 +45,7 @@ namespace MediaGetCore.Extractors {
                 Thumbnail = new Uri(mediaJObject["args"]["thumbnail_url"].Value<string>()),
                 Description = pageHTML
                     .DocumentNode.SelectSingleNode("//meta[@name='description']")
-                    .GetAttributeValue("content", null)
+                    ?.GetAttributeValue("content", null)
             };
 
             // 取得解密函數

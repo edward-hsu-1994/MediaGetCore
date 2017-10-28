@@ -10,7 +10,7 @@ using System.Net;
 
 namespace MediaGetCore.Test {
     public class YoutubeExtractorTest : ExtractorTestBase<YoutubeExtractor> {
-        [Theory]
+        [Theory(DisplayName = "Extractors.Youtube")]
         [InlineData("https://www.youtube.com/watch?v=O_icXlxB4jI")]
         [InlineData("https://www.youtube.com/watch?v=P32pMWRlZx8")]
         [InlineData("https://www.youtube.com/watch?v=LAPXqtxxstE")]

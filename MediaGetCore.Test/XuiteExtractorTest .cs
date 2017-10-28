@@ -10,7 +10,7 @@ using System.Net;
 
 namespace MediaGetCore.Test {
     public class XuiteExtractorTest : ExtractorTestBase<XuiteExtractor> {
-        [Theory]
+        [Theory(DisplayName = "Extractors.Xuite")]
         [InlineData("https://vlog.xuite.net/play/VnFsT3dILTYzODYxOS5mbHY=")]
         [InlineData("https://vlog.xuite.net/play/ZUFTU0ZNLTMwNzY4NTEzLmZsdg==")]
         [InlineData("https://vlog.xuite.net/play/VHlqbVJILTMxMDg3NjUxLmZsdg==")]
