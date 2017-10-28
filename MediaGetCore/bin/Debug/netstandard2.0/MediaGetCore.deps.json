@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "17643b6a9028a4388e76556a142352dfce0b3b78"
+    "signature": "72648058c74477bce957ad73df294c7e17768d12"
   },
   "compilationOptions": {},
   "targets": {
@@ -9,12 +9,68 @@
     ".NETStandard,Version=v2.0/": {
       "MediaGetCore/2.0.0": {
         "dependencies": {
+          "ChakraCore.NET": "1.0.3",
+          "EzCoreKit.Extensions": "3.0.0-CI00031",
           "HtmlAgilityPack": "1.6.2",
           "NETStandard.Library": "2.0.0",
           "Newtonsoft.Json": "10.0.3"
         },
         "runtime": {
           "MediaGetCore.dll": {}
+        }
+      },
+      "ChakraCore.NET/1.0.3": {
+        "dependencies": {
+          "ChakraCore.NET.Core": "1.0.2",
+          "ChakraCore.NET.Promise": "1.0.1",
+          "ChakraCore.NET.ShareMemoryObjects": "1.0.0",
+          "ChakraCore.NET.Timer": "1.0.0",
+          "Microsoft.ChakraCore": "1.7.3",
+          "NETStandard.Library": "2.0.0"
+        },
+        "runtime": {
+          "lib/netstandard1.4/ChakraCore.NET.dll": {}
+        }
+      },
+      "ChakraCore.NET.Core/1.0.2": {
+        "dependencies": {
+          "Microsoft.ChakraCore": "1.7.3",
+          "NETStandard.Library": "2.0.0"
+        },
+        "runtime": {
+          "lib/netstandard1.4/ChakraCore.NET.Core.dll": {}
+        }
+      },
+      "ChakraCore.NET.Promise/1.0.1": {
+        "dependencies": {
+          "ChakraCore.NET.Core": "1.0.2",
+          "NETStandard.Library": "2.0.0"
+        },
+        "runtime": {
+          "lib/netstandard1.4/ChakraCore.NET.Promise.dll": {}
+        }
+      },
+      "ChakraCore.NET.ShareMemoryObjects/1.0.0": {
+        "dependencies": {
+          "ChakraCore.NET.Core": "1.0.2",
+          "NETStandard.Library": "2.0.0"
+        },
+        "runtime": {
+          "lib/netstandard1.4/ChakraCore.NET.ShareMemoryObjects.dll": {}
+        }
+      },
+      "ChakraCore.NET.Timer/1.0.0": {
+        "dependencies": {
+          "ChakraCore.NET.Core": "1.0.2",
+          "NETStandard.Library": "2.0.0"
+        },
+        "runtime": {
+          "lib/netstandard1.4/ChakraCore.NET.Timer.dll": {}
+        }
+      },
+      "EzCoreKit.Extensions/3.0.0-CI00031": {
+        "runtime": {
+          "lib/netstandard2.0/EzCoreKit.Extensions.dll": {}
         }
       },
       "HtmlAgilityPack/1.6.2": {
@@ -28,6 +84,7 @@
           "lib/netstandard2.0/HtmlAgilityPack.dll": {}
         }
       },
+      "Microsoft.ChakraCore/1.7.3": {},
       "Microsoft.CSharp/4.3.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -788,12 +845,61 @@
       "serviceable": false,
       "sha512": ""
     },
+    "ChakraCore.NET/1.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-EoydzafQhJ4cXQikiIseN+1bvGnAJ9VeWlyiScuPPo7ZVcV3CD1k08snqDzkvuhPRlXU8jLVMqPecuEGZgFSYQ==",
+      "path": "chakracore.net/1.0.3",
+      "hashPath": "chakracore.net.1.0.3.nupkg.sha512"
+    },
+    "ChakraCore.NET.Core/1.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7Uhwk6pJWOR67wc6sZfO+30nXADiZI4RoqJOXcQ88cM8xrYRkJpX5eh8cWPchik96uh0u1puQfFe2vgcjVM7YA==",
+      "path": "chakracore.net.core/1.0.2",
+      "hashPath": "chakracore.net.core.1.0.2.nupkg.sha512"
+    },
+    "ChakraCore.NET.Promise/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HpJjrQiJao0PuXYNW68aotvFrC8TKe1u1XTx6PUPv9LTY/mBSOI/iZdDakSwetlJks+SKdwWhjaLrjgH/LpdqQ==",
+      "path": "chakracore.net.promise/1.0.1",
+      "hashPath": "chakracore.net.promise.1.0.1.nupkg.sha512"
+    },
+    "ChakraCore.NET.ShareMemoryObjects/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NCNCv7CJBbbHphBKMDMiwknxbN8u1SM+kUd4HSQFToeHgSF4314VOJGJwLml59hjtxzuGHiy3tadT0TodHSUxQ==",
+      "path": "chakracore.net.sharememoryobjects/1.0.0",
+      "hashPath": "chakracore.net.sharememoryobjects.1.0.0.nupkg.sha512"
+    },
+    "ChakraCore.NET.Timer/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8Ss4jK37sz76t/1owkJm4Ew9+E3k/vaHJqIseItnuLawKIphHRx5XkrgGryHH79ahA3+C+nUdjixHmQk9mcv4w==",
+      "path": "chakracore.net.timer/1.0.0",
+      "hashPath": "chakracore.net.timer.1.0.0.nupkg.sha512"
+    },
+    "EzCoreKit.Extensions/3.0.0-CI00031": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AwElje2Xu4881sPJQpP69IvzpRv6CoQyLVv6MUb6RUPy+uoRM/cWlU1d4q6GHynxrwQKzTIXA8njA+lbzamRmQ==",
+      "path": "ezcorekit.extensions/3.0.0-ci00031",
+      "hashPath": "ezcorekit.extensions.3.0.0-ci00031.nupkg.sha512"
+    },
     "HtmlAgilityPack/1.6.2": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-d1aRn9leFG3ISpfy0GMnFVHegKB3X6rIdkF/E+20+DOCssZuz4FDshEocV6P8K86dOQzILnISprKH8l6QM3bfQ==",
       "path": "htmlagilitypack/1.6.2",
       "hashPath": "htmlagilitypack.1.6.2.nupkg.sha512"
+    },
+    "Microsoft.ChakraCore/1.7.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ilcQRbCYA4ZaP2N33noTNQc/Gs53BWmZOy0upXXBjgFPhYtL1Jpt3WXWFAiAwlveOiF8WCHiKn4TwKLq6YQILA==",
+      "path": "microsoft.chakracore/1.7.3",
+      "hashPath": "microsoft.chakracore.1.7.3.nupkg.sha512"
     },
     "Microsoft.CSharp/4.3.0": {
       "type": "package",

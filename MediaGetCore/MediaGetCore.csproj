@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="ChakraCore.NET" Version="1.0.3" />
     <PackageReference Include="EzCoreKit.Extensions" Version="3.0.0-CI00031" />
     <PackageReference Include="HtmlAgilityPack" Version="1.6.2" />
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
