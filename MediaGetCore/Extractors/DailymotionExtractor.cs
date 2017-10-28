@@ -29,45 +29,42 @@ namespace MediaGetCore.Extractors {
         private async Task<MediaInfo[]> _GetMediaInfosAsync(string url, int time = 1) {
             if (!IsMatch(url)) throw new UrlNotSupportedException();
 
-            var pageHTML = await DownloadHelper.DownloadHtmlAsync(url);
-
-            JObject mediaJObject;
+            var result = new List<MediaInfo>();
             try {
-                mediaJObject = GetMediaJObject(pageHTML);
+                var pageHTML = await DownloadHelper.DownloadHtmlAsync(url);
+                JObject mediaJObject = GetMediaJObject(pageHTML);
+
+                var template = new MediaInfo() {
+                    Name = mediaJObject["metadata"]["title"].Value<string>(),
+                    Description = pageHTML
+                        .DocumentNode.SelectSingleNode("//meta[@property='og:description']")
+                        ?.GetAttributeValue("content", null),
+                    Duration = mediaJObject["metadata"]["duration"].Value<double>(),
+                    SourceUrl = new Uri(url),
+                    Thumbnail = new Uri(mediaJObject["metadata"]["filmstrip_url"].Value<string>()),
+                    ExtractorType = GetType(),
+                    Type = MediaTypes.Video
+                };
+
+                var qualities = mediaJObject["metadata"]["qualities"].Value<JObject>();
+
+                foreach (var quality in qualities.Properties().Select(x => x.Name)) {
+                    if (quality == "auto") continue;
+
+                    foreach (var format in qualities[quality].Value<JArray>()) {
+                        var resultItem = (MediaInfo)template.Clone();
+                        resultItem.RealUrl = new Uri(format["url"].Value<string>());
+                        resultItem.Attributes["quality"] = quality;
+                        resultItem.Attributes["mime"] = format["type"].Value<string>();
+                        if (resultItem.Attributes["mime"].IndexOf("/mp4") > -1) { // 只有MP4有大小
+                            resultItem.Attributes["size"] = GetSize(format["url"].Value<string>());
+                        }
+                        result.Add(resultItem);
+                    }
+                }
             } catch { // 偶爾會完全取不到資料
                 if (time <= 0) throw new InvalidOperationException("無法取得頁面HTML");
                 return await _GetMediaInfosAsync(url, --time);
-            }
-
-            var template = new MediaInfo() {
-                Name = mediaJObject["metadata"]["title"].Value<string>(),
-                Description = pageHTML
-                    .DocumentNode.SelectSingleNode("//meta[@property='og:description']")
-                    ?.GetAttributeValue("content", null),
-                Duration = mediaJObject["metadata"]["duration"].Value<double>(),
-                SourceUrl = new Uri(url),
-                Thumbnail = new Uri(mediaJObject["metadata"]["filmstrip_url"].Value<string>()),
-                ExtractorType = GetType(),
-                Type = MediaTypes.Video
-            };
-
-            var result = new List<MediaInfo>();
-
-            var qualities = mediaJObject["metadata"]["qualities"].Value<JObject>();
-
-            foreach (var quality in qualities.Properties().Select(x => x.Name)) {
-                if (quality == "auto") continue;
-
-                foreach (var format in qualities[quality].Value<JArray>()) {
-                    var resultItem = (MediaInfo)template.Clone();
-                    resultItem.RealUrl = new Uri(format["url"].Value<string>());
-                    resultItem.Attributes["quality"] = quality;
-                    resultItem.Attributes["mime"] = format["type"].Value<string>();
-                    if (resultItem.Attributes["mime"].IndexOf("/mp4") > -1) { // 只有MP4有大小
-                        resultItem.Attributes["size"] = GetSize(format["url"].Value<string>());
-                    }
-                    result.Add(resultItem);
-                }
             }
 
             return result.ToArray();
