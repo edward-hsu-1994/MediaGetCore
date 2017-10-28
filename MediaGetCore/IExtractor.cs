@@ -9,14 +9,14 @@ namespace MediaGetCore {
     /// </summary>
     public interface IExtractor {
         /// <summary>
-        /// 取得指定<see cref="Uri"/>字串頁面媒體
+        /// 異步取得指定<see cref="Uri"/>字串頁面媒體
         /// </summary>
         /// <param name="url">目標網址</param>
         /// <returns>媒體剖析結果陣列</returns>
         Task<MediaInfo[]> GetMediaInfoAsync(string url);
 
         /// <summary>
-        /// 取得指定<see cref="Uri"/>頁面媒體
+        /// 異步取得指定<see cref="Uri"/>頁面媒體
         /// </summary>
         /// <param name="url">目標網址</param>
         /// <returns>媒體剖析結果陣列</returns>
