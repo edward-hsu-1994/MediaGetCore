@@ -60,7 +60,7 @@ namespace MediaGetCore {
         /// 取得目前實例的深層副本
         /// </summary>
         /// <returns>目前實例的深層副本</returns>
-        object ICloneable.Clone() {
+        public object Clone() {
             MediaInfo result = new MediaInfo();
             result.Name = this.Name;
             result.Type = this.Type;

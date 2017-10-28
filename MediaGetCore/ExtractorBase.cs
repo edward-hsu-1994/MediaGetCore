@@ -10,7 +10,7 @@ namespace MediaGetCore {
     /// </summary>
     public abstract class ExtractorBase : IExtractor {
         /// <inheritdoc />
-        public abstract Task<MediaInfo[]> GetMediaInfoAsync(string url);
+        public abstract Task<MediaInfo[]> GetMediaInfosAsync(string url);
 
         /// <inheritdoc />
         public virtual bool IsMatch(string url) {
@@ -21,7 +21,7 @@ namespace MediaGetCore {
         #region 多載
 
         /// <inheritdoc />
-        public Task<MediaInfo[]> GetMediaInfoAsync(Uri url) => this.GetMediaInfoAsync(url.OriginalString);
+        public Task<MediaInfo[]> GetMediaInfosAsync(Uri url) => this.GetMediaInfosAsync(url.OriginalString);
 
         /// <inheritdoc />
         public bool IsMatch(Uri url) => this.IsMatch(url.OriginalString);

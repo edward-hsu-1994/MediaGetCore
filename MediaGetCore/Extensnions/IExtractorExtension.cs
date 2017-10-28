@@ -14,7 +14,7 @@ namespace MediaGetCore.Extensnions {
         /// <param name="url">目標網址</param>
         /// <returns>媒體剖析結果陣列</returns>
         public static MediaInfo[] GetMediaInfo(this IExtractor obj, string url) {
-            return obj.GetMediaInfoAsync(url).GetAwaiter().GetResult();
+            return obj.GetMediaInfosAsync(url).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -24,7 +24,7 @@ namespace MediaGetCore.Extensnions {
         /// <param name="url">目標網址</param>
         /// <returns>媒體剖析結果陣列</returns>
         public static MediaInfo[] GetMediaInfo(this IExtractor obj, Uri url) {
-            return obj.GetMediaInfoAsync(url).GetAwaiter().GetResult();
+            return obj.GetMediaInfosAsync(url).GetAwaiter().GetResult();
         }
     }
 }
