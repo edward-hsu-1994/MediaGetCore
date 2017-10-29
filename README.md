@@ -11,7 +11,7 @@ PM> Install-Package MediaGetCore
 ```
 
 ### 快速上手
-使用單一影音平台的剖析器進行影音剖析的動作。
+1. 使用單一影音平台的剖析器進行影音剖析的動作。
 ```csharp
 using MediaGetCore.Extractors;
 ...(something)...
@@ -21,6 +21,17 @@ var infos = await yt.GetMediaInfosAsync("https://www.youtube.com/watch?v=<VIDEO_
 // ELSE Use sync Method ( using MediaGetCore.Extensions; )
 var infos = yt.GetMeidaInfos("https://www.youtube.com/watch?v=<VIDEO_ID>");
 
+var firstRealUrl = infos.First().RealUrl;
+```
+
+2. 使用配接器
+```csharp
+using MediaGetCore;
+...(something)...
+ExtractorAdapter adp = new ExtractorAdapter();
+adp.AddDefaultExtractors(); //引入所有的支援項目
+
+var infos = await adp.GetMediaInfosAsync("<VIDEO URL>");
 var firstRealUrl = infos.First().RealUrl;
 ```
 
