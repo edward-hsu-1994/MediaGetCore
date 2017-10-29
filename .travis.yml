@@ -5,6 +5,9 @@ dotnet: 2.0.0
 os:
 - linux
 - osx
+matrix:
+  allow_failures:
+    - os: osx
 install:
 - dotnet restore
 script:
