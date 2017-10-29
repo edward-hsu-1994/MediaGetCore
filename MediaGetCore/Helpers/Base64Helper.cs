@@ -11,7 +11,7 @@ namespace MediaGetCore.Helpers {
         /// 將BASE64內容轉換為字串
         /// </summary>
         /// <param name="base64">BASE64編碼內容</param>
-        /// <param name="encoding">字串編碼，如為<see cref="null"/>則表示使用預設值<see cref="Encoding.UTF8"/></param>
+        /// <param name="encoding">字串編碼，如為空值則表示使用預設值<see cref="Encoding.UTF8"/></param>
         /// <returns>轉換字串結果</returns>
         public static string Base64ToString(string base64, Encoding encoding = null) {
             encoding = encoding ?? Encoding.UTF8;
@@ -22,7 +22,7 @@ namespace MediaGetCore.Helpers {
         /// 將字串轉換為BASE64內容
         /// </summary>
         /// <param name="str">字串</param>
-        /// <param name="encoding">字串編碼，如為<see cref="null"/>則表示使用預設值<see cref="Encoding.UTF8"/></param>
+        /// <param name="encoding">字串編碼，如為空值則表示使用預設值<see cref="Encoding.UTF8"/></param>
         /// <returns>轉換BASE64結果</returns>
         public static string StringToBase64(string str, Encoding encoding = null) {
             encoding = encoding ?? Encoding.UTF8;
