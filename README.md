@@ -1,4 +1,5 @@
 ﻿MediaGetCore [![xpy MyGet Build Status](https://www.myget.org/BuildSource/Badge/xpy?identifier=79c81589-818b-4f7f-8233-a0ee42cf5264)](https://www.myget.org/)
+![Travis CI](https://api.travis-ci.org/XuPeiYao/MediaGetCore.svg?branch=master)
 ---
 這是一個支援 .NET Core 環境的類別庫，開發者可以透過簡單的調用剖析器物件，解析網路媒體影音真實位址。
 

@@ -9,9 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ChakraCore.NET" Version="1.0.3" />
     <PackageReference Include="EzCoreKit.Extensions" Version="3.0.0-CI00031" />
     <PackageReference Include="HtmlAgilityPack" Version="1.6.2" />
+    <PackageReference Include="JavaScriptEngineSwitcher.ChakraCore" Version="3.0.0-alpha6" />
+    <PackageReference Include="JavaScriptEngineSwitcher.ChakraCore.Native.debian-x64" Version="3.0.0-alpha6" />
+    <PackageReference Include="JavaScriptEngineSwitcher.ChakraCore.Native.linux-x64" Version="3.0.0-alpha6" />
+    <PackageReference Include="JavaScriptEngineSwitcher.ChakraCore.Native.osx-x64" Version="3.0.0-alpha6" />
+    <PackageReference Include="JavaScriptEngineSwitcher.ChakraCore.Native.win-x64" Version="3.0.0-alpha6" />
+    <PackageReference Include="JavaScriptEngineSwitcher.ChakraCore.Native.win-x86" Version="3.0.0-alpha6" />
+    <PackageReference Include="JavaScriptEngineSwitcher.ChakraCore.Native.win8-arm" Version="3.0.0-alpha6" />
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
   </ItemGroup>
 

@@ -1,4 +1,5 @@
-﻿using ChakraCore.NET;
+﻿using JavaScriptEngineSwitcher.ChakraCore;
+using JavaScriptEngineSwitcher.Core;
 
 namespace MediaGetCore.Helpers {
     /// <summary>
@@ -6,21 +7,20 @@ namespace MediaGetCore.Helpers {
     /// </summary>
     public static class JavascriptHelper {
         /// <summary>
-        /// Chakra執行階段
+        /// Chakra引擎
         /// </summary>
-        private static ChakraRuntime runtimeInstance;
-
-        /// <summary>
-        /// Chakra內容
-        /// </summary>
-        private static ChakraContext contextInstance;
+        private static IJsEngine engine;
 
         /// <summary>
         /// 初始化Javascript幫助類別
         /// </summary>
         static JavascriptHelper() {
-            runtimeInstance = ChakraRuntime.Create();
-            contextInstance = runtimeInstance.CreateContext(true);
+            engine = new ChakraCoreJsEngine(
+                new ChakraCoreSettings {
+                    DisableEval = true,
+                    EnableExperimentalFeatures = true
+                }
+            );
         }
 
         /// <summary>
@@ -28,6 +28,6 @@ namespace MediaGetCore.Helpers {
         /// </summary>
         /// <param name="script">Javascript腳本</param>
         /// <returns>Javascript執行結果</returns>
-        public static string Run(string script) => contextInstance.RunScript(script);
+        public static string Run(string script) => engine.Evaluate<string>(script);
     }
 }
