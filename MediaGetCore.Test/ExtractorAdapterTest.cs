@@ -20,7 +20,6 @@ namespace MediaGetCore.Test {
         [InlineData("https://vlog.xuite.net/play/NWZ6cGFkLTg1MjUxMDQuZmx2")]
         [InlineData("http://www.dailymotion.com/video/x5iiw1g")]
         [InlineData("https://www.youtube.com/watch?v=jNQXAC9IVRw")]
-        [InlineData("https://www.youtube.com/watch?v=MuidrWY30Xk")]
         public override async Task GetMediaInfosAsync(string url) {
             ExtractorAdapter adapter = this.Instance as ExtractorAdapter;
             adapter.AddDefaultExtractors();
