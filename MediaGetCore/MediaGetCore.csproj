@@ -12,6 +12,10 @@
     <DocumentationFile>bin\Debug\netstandard2.0\MediaGetCore.xml</DocumentationFile>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard2.0\MediaGetCore.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="EzCoreKit.Extensions" Version="3.0.0-CI00036" />
     <PackageReference Include="EzCoreKit.Reflection" Version="3.0.0-CI00036" />
